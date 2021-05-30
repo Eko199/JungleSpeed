@@ -15,7 +15,7 @@ namespace Jungle_Speed {
         static void Main(string[] args) {
             bool inGame = true;
             Console.OutputEncoding = Encoding.UTF8;
-            string a = "\u263B";
+            string a = "\u2592";
             string[][] table = new string[11][];
             for (int i=0; i<11; i++) {
                 table[i] = new string[21];
