@@ -1,0 +1,7 @@
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\bin\Debug\Jungle Speed.exe.config
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\bin\Debug\Jungle Speed.exe
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\bin\Debug\Jungle Speed.pdb
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\obj\Debug\Jungle Speed.csproj.AssemblyReference.cache
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\obj\Debug\Jungle Speed.csproj.CoreCompileInputs.cache
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\obj\Debug\Jungle Speed.exe
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\obj\Debug\Jungle Speed.pdb
