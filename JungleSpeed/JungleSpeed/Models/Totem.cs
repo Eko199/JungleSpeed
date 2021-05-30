@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JungleSpeed.IO;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +13,21 @@ namespace JungleSpeed.Models
         }
         public override void Draw()
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("____________");
+            sb.AppendLine("\\          /");
+            sb.AppendLine(" \\        /");
+            sb.AppendLine("  \\      /");
+            sb.AppendLine("   \\    /");
+            sb.AppendLine("   /    \\");
+            sb.AppendLine("  /      \\");
+            sb.AppendLine("  \\      /");
+            sb.AppendLine("   \\    /");
+            sb.AppendLine("   /    \\");
+            sb.AppendLine("  /      \\");
+            sb.AppendLine(" /        \\");
+            sb.AppendLine("/__________\\");
+            Renderer.WriteAtPosition(sb.ToString(), new Position(0, 0));
         }
     }
 }

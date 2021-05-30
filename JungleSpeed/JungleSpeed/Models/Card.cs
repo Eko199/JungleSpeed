@@ -5,11 +5,10 @@ using System.Text;
 
 namespace JungleSpeed.Models
 {
-    class Player : GameObject
+    class Card : GameObject
     {
-        private Queue<Card> cards;
-        public Player(IRenderer renderer)
-            : base(renderer)
+        public Card(IRenderer renderer)
+               : base(renderer)
         {
         }
         public override void Draw()

@@ -7,6 +7,11 @@ namespace JungleSpeed.Core
 {
     class Engine : IEngine
     {
+        private IManager manager;
+        public Engine(IManager manager)
+        {
+            this.manager = manager;
+        }
         public void Run()
         {
             throw new NotImplementedException();
