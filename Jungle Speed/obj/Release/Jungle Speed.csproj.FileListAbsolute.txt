@@ -1,0 +1,6 @@
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\bin\Release\Jungle Speed.exe.config
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\bin\Release\Jungle Speed.exe
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\bin\Release\Jungle Speed.pdb
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\obj\Release\Jungle Speed.csproj.CoreCompileInputs.cache
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\obj\Release\Jungle Speed.exe
+C:\Users\asusv\Documents\Jungle Speed\Jungle Speed\obj\Release\Jungle Speed.pdb
