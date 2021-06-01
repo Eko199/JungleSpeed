@@ -13,6 +13,6 @@ namespace JungleSpeed.Models
         }
         protected IRenderer Renderer { get; set; }
 
-        public abstract void Draw();
+        public abstract void Draw(Position pos);
     }
 }

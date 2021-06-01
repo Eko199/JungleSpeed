@@ -13,9 +13,9 @@ namespace JungleSpeed.Models
             : base(renderer)
         {
         }
-        public override void Draw()
+        public override void Draw(Position pos)
         {
-            playedCards.Seek().DrawAtPosition();
+            playedCards.Peek().Draw(pos);
             throw new NotImplementedException();
         }
     }
