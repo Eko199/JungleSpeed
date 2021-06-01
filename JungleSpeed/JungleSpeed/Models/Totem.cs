@@ -11,7 +11,7 @@ namespace JungleSpeed.Models
             : base(renderer)
         {
         }
-        public override void Draw()
+        public override void Draw(Position pos)
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("____________");
@@ -27,7 +27,7 @@ namespace JungleSpeed.Models
             sb.AppendLine("  /      \\");
             sb.AppendLine(" /        \\");
             sb.AppendLine("/__________\\");
-            Renderer.WriteAtPosition(sb.ToString(), new Position(0, 0));
+            Renderer.WriteAtPosition(sb.ToString(), pos);
         }
     }
 }
