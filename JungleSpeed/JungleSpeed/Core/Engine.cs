@@ -14,7 +14,7 @@ namespace JungleSpeed.Core
         }
         public void Run()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("");
         }
     }
 }
