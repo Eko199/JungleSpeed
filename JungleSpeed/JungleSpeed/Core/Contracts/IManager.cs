@@ -1,10 +1,10 @@
-﻿using System;
+﻿using JungleSpeed.Models;
 using System.Collections.Generic;
-using System.Text;
 
-namespace JungleSpeed.Core.Contracts
+namespace JungleSpeed.Core
 {
     interface IManager
     {
+
     }
 }
