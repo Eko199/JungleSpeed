@@ -1,6 +1,7 @@
 ﻿using JungleSpeed.IO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace JungleSpeed.Models
@@ -14,19 +15,15 @@ namespace JungleSpeed.Models
         public override void Draw(Position pos)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("____________");
-            sb.AppendLine("\\          /");
-            sb.AppendLine(" \\        /");
-            sb.AppendLine("  \\      /");
-            sb.AppendLine("   \\    /");
-            sb.AppendLine("   /    \\");
-            sb.AppendLine("  /      \\");
-            sb.AppendLine("  \\      /");
-            sb.AppendLine("   \\    /");
-            sb.AppendLine("   /    \\");
-            sb.AppendLine("  /      \\");
-            sb.AppendLine(" /        \\");
-            sb.AppendLine("/__________\\");
+            using (StreamReader reader = new StreamReader("../../../Totem.txt"))
+            {
+                string line = reader.ReadLine();
+                while (line != null)
+                {
+                    sb.AppendLine(line);
+                    line = reader.ReadLine();
+                }
+            }
             Renderer.WriteAtPosition(sb.ToString(), pos);
         }
     }
