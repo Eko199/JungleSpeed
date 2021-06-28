@@ -8,13 +8,13 @@ namespace JungleSpeed.Models
     class Card : GameObject
     {
         private string symbol;
-        public Card(IRenderer renderer)
-               : base(renderer)
+        public Card(IRenderer renderer, Position pos)
+               : base(renderer, pos)
         {
         }
-        public override void Draw(Position pos)
+        public override void Draw()
         {
-            Renderer.WriteAtPosition(symbol, pos);
+            Renderer.WriteAtPosition(symbol, Pos);
             throw new NotImplementedException();
         }
     }

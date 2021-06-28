@@ -8,12 +8,13 @@ namespace JungleSpeed.Models
     abstract class GameObject
     {
         private Position position;
-        public GameObject(IRenderer renderer)
+        public GameObject(IRenderer renderer, Position pos)
         {
             Renderer = renderer;
+            Pos = pos;
         }
         protected IRenderer Renderer { get; set; }
-        public Position Position { 
+        public Position Pos { 
             get 
             {
                 return position;
@@ -24,7 +25,7 @@ namespace JungleSpeed.Models
                 if (value.X > 0 && value.Y > 0)
                 {
                     position = value;
-                }
+                } 
                 else
                 {
                     throw new ArgumentException("Invalid coordinates");
@@ -32,6 +33,6 @@ namespace JungleSpeed.Models
             } 
         }
 
-        public abstract void Draw(Position pos);
+        public abstract void Draw();
     }
 }

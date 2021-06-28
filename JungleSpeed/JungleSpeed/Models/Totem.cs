@@ -8,11 +8,11 @@ namespace JungleSpeed.Models
 {
     class Totem : GameObject
     {
-        public Totem(IRenderer renderer)
-            : base(renderer)
+        public Totem(IRenderer renderer, Position pos)
+            : base(renderer, pos)
         {
         }
-        public override void Draw(Position pos)
+        public override void Draw()
         {
             StringBuilder sb = new StringBuilder();
             using (StreamReader reader = new StreamReader("../../../Totem.txt"))
@@ -24,7 +24,7 @@ namespace JungleSpeed.Models
                     line = reader.ReadLine();
                 }
             }
-            Renderer.WriteAtPosition(sb.ToString(), pos);
+            Renderer.WriteAtPosition(sb.ToString(), Pos);
         }
     }
 }
