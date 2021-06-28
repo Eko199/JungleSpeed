@@ -8,13 +8,16 @@ namespace JungleSpeed.Core
     class Engine : IEngine
     {
         private IManager manager;
-        public Engine(IManager manager)
+        private int playerCount = 5;
+        public Engine()
         {
-            this.manager = manager;
+            
         }
         public void Run()
         {
-            Console.WriteLine("");
+            Console.WriteLine("Boqn go kefi i raboti.");
+            manager = new Manager();
+            manager.initialisePlayers(playerCount);
         }
     }
 }

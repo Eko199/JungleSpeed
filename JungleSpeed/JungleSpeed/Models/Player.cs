@@ -15,7 +15,6 @@ namespace JungleSpeed.Models {
         public override void Draw() {
             playedCards.Peek().Draw();
             Renderer.WriteAtPosition(deck.Count.ToString(), new Position(Pos.X, Pos.Y + deckPos));
-
         }
         public void DrawCard() {
             playedCards.Push(deck.Dequeue());

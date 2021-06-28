@@ -8,7 +8,7 @@ namespace JungleSpeed
     {
         static void Main(string[] args)
         {
-            Engine engine = new Engine((IManager) new ConsoleManager(2));
+            Engine engine = new Engine();
             engine.Run();
         }
     }

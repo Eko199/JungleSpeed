@@ -8,43 +8,37 @@ using System.Text;
 
 namespace JungleSpeed.Core
 {
-    class ConsoleManager
+    class Manager : IManager
     {
         private IList<Player> players;
         private int fieldHeight;
         private int fieldWidth;
         private Totem totem;
 
-        public ConsoleManager(int playerCount)
+        public Manager()
         {
-            players = new List<Player>(playerCount);
+            players = new List<Player>();
             fieldHeight = 100;
             fieldWidth = 100;
             totem = new Totem(new ConsoleRenderer(), new Position(fieldWidth / 2, fieldHeight / 2));
-
-            initialisePlayers();
         }
-        public void initialisePlayers()
+        public void initialisePlayers(int playerCount)
         {
-            int firstRow = players.Count / 2 + players.Count % 2;
-            int secondRow = players.Count / 2;
+            players = new List<Player>(playerCount);
+
+            int firstRow = playerCount / 2 + playerCount % 2;
+            int secondRow = playerCount / 2;
 
             int posWidth = fieldWidth / 2 - firstRow;
             int firstRowY = 3;
             int secondRowY = fieldHeight - 3;
 
             for (int i = 0; i < firstRow; i++)
-            {
-                players[i].Pos.X = posWidth + i * 2;
-                players[i].Pos.Y = firstRowY;
+                players.Add(new Player(new ConsoleRenderer(), new Position(posWidth + i * 2, firstRowY), -1));
 
-            }
 
             for (int i = 0; i < secondRow; i++)
-            {
-                players[i].Pos.X = posWidth + i * 2;
-                players[i].Pos.Y = secondRowY;
-            }
+                players.Add(new Player(new ConsoleRenderer(), new Position(posWidth + i * 2, secondRowY), 1));
         }
 
     }
