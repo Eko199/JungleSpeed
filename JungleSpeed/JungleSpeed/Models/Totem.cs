@@ -32,7 +32,6 @@ namespace JungleSpeed.Models
         }
         public override void Draw()
         {
-            
             Renderer.WriteAtPosition(skin, new Position(Pos.X - width / 2, Pos.Y - height / 2));
         }
     }
