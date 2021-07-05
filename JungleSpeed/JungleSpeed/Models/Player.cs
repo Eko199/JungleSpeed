@@ -18,6 +18,7 @@ namespace JungleSpeed.Models {
         }
         public void DrawCard() {
             playedCards.Push(deck.Dequeue());
+            playedCards.Peek().Pos = Pos;
         }
     }
 }

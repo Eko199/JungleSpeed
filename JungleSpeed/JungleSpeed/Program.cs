@@ -10,6 +10,8 @@ namespace JungleSpeed
         {
             Engine engine = new Engine();
             engine.Run();
+            //Console.OutputEncoding = Encoding.UTF8;
+            //Console.WriteLine("Å Ä Â Ã");
         }
     }
 }
