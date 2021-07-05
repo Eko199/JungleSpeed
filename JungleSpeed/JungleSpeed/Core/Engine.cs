@@ -1,4 +1,5 @@
 ﻿using JungleSpeed.Core.Contracts;
+using JungleSpeed.IO.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,9 +16,13 @@ namespace JungleSpeed.Core
         }
         public void Run()
         {
-            Console.WriteLine("Boqn go kefi i raboti.");
-            manager = new Manager();
-            manager.initialisePlayers(playerCount);
+            //Console.WriteLine("Boqn go kefi i raboti.");
+
+            manager = new Manager(new ConsoleRenderer());
+            manager.InitialisePlayers(playerCount);
+            manager.InitialiseCards();
+            //manager.DrawField();      
+                
         }
     }
 }

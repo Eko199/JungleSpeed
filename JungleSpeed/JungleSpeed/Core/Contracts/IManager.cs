@@ -5,7 +5,9 @@ namespace JungleSpeed.Core
 {
     interface IManager
     {
-        void initialisePlayers(int playerCount);
+        void InitialisePlayers(int playerCount);
+        void DrawField();
+        void InitialiseCards();
     }
 
 }

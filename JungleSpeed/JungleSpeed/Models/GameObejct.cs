@@ -22,7 +22,7 @@ namespace JungleSpeed.Models
             
             set
             {
-                if (value.X > 0 && value.Y > 0)
+                if (value.X >= 0 && value.Y >= 0)
                 {
                     position = value;
                 } 
