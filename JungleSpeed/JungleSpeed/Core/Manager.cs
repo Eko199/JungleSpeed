@@ -50,7 +50,7 @@ namespace JungleSpeed.Core
 				{
 					cards.Add(new Card(renderer, new Position(0, 0), '3', ConsoleColor.Magenta));
 				}
-				//cards = cards.OrderBy(x => new Random().Next()).ToList();
+				cards = cards.OrderBy(x => new Random().Next()).ToList();
 
 			}
 		}
@@ -65,12 +65,12 @@ namespace JungleSpeed.Core
 			int firstRowY = 3;
 			int secondRowY = fieldHeight - 3;
 
-			for (int i = 0; i < firstRow; i++)
-				players.Add(new Player(renderer, new Position(posWidth + i * 2, firstRowY), -1));
+			//for (int i = 0; i < firstRow; i++)
+			//	players.Add(new Player(renderer, new Position(posWidth + i * 2, firstRowY), -1),  cards.ToList().GetRange());
 
 
-			for (int i = 0; i < secondRow; i++)
-				players.Add(new Player(renderer, new Position(posWidth + i * 2, secondRowY), 1));
+			//for (int i = 0; i < secondRow; i++)
+			//	players.Add(new Player(renderer, new Position(posWidth + i * 2, secondRowY), 1));
 		}
 		public void DrawField()
 		{

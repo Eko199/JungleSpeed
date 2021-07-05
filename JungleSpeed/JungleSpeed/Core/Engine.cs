@@ -19,8 +19,8 @@ namespace JungleSpeed.Core
             //Console.WriteLine("Boqn go kefi i raboti.");
 
             manager = new Manager(new ConsoleRenderer());
-            manager.InitialisePlayers(playerCount);
             manager.InitialiseCards();
+            manager.InitialisePlayers(playerCount);
             //manager.DrawField();      
                 
         }

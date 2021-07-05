@@ -8,10 +8,10 @@ namespace JungleSpeed.Models {
         private Queue<Card> deck;
         private Stack<Card> playedCards;
         public int deckPos;
-        public Player(IRenderer renderer, Position pos, int deckPosition)
+        public Player(IRenderer renderer, Position pos, int deckPosition, IEnumerable<Card> initialDeck)
             : base(renderer, pos) {
             playedCards = new Stack<Card>();
-            deck = new Queue<Card>();
+            deck = new Queue<Card>(initialDeck);
             deckPos = deckPosition;
         }
         public override void Draw() {
