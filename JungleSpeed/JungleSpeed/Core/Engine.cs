@@ -20,8 +20,8 @@ namespace JungleSpeed.Core
 
             manager = new Manager(new ConsoleRenderer());
             manager.InitialiseCards();
-            manager.InitialisePlayers(playerCount);
-            //manager.DrawField();      
+            manager.ShuffleCards();
+            manager.InitialisePlayers(playerCount);   
                 
         }
     }

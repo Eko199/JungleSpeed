@@ -50,10 +50,22 @@ namespace JungleSpeed.Core
 				{
 					cards.Add(new Card(renderer, new Position(0, 0), '3', ConsoleColor.Magenta));
 				}
-				cards = cards.OrderBy(x => new Random().Next()).ToList();
-
 			}
 		}
+		public void ShuffleCards()
+		{
+			Random random = new Random();
+			
+			for (int i = 0; i < cards.Count; i++)
+			{
+				int r = i + random.Next(0, cards.Count - i);
+
+				Card card = cards[i];
+				cards[i] = cards[r];
+				cards[r] = card;
+			}
+		}
+
 		public void InitialisePlayers(int playerCount)
 		{
 			players = new List<Player>(playerCount);
@@ -65,12 +77,12 @@ namespace JungleSpeed.Core
 			int firstRowY = 3;
 			int secondRowY = fieldHeight - 3;
 
-			//for (int i = 0; i < firstRow; i++)
-			//	players.Add(new Player(renderer, new Position(posWidth + i * 2, firstRowY), -1),  cards.ToList().GetRange());
+			for (int i = 0; i < firstRow; i++)
+				players.Add(new Player(renderer, new Position(posWidth + i * 2, firstRowY), -1), 1,  cards.ToList().GetRange(1, 20));
 
 
-			//for (int i = 0; i < secondRow; i++)
-			//	players.Add(new Player(renderer, new Position(posWidth + i * 2, secondRowY), 1));
+			for (int i = 0; i < secondRow; i++)
+				players.Add(new Player(renderer, new Position(posWidth + i * 2, secondRowY), 1, cards.ToList().GetRange(1, 20)));
 		}
 		public void DrawField()
 		{
@@ -80,5 +92,17 @@ namespace JungleSpeed.Core
 			}
 			totem.Draw();
 		}
-	}
+
+        public void DealCards()
+        {
+			int cardsPerPlayer = cards.Count / players.Count;
+            for (int i = 0; i < cards.Count; i++)
+            {
+                for (int j = 0; j < players.Count; j++)
+                {
+					players[j] = new Player(renderer, )
+                }
+            }
+        }
+    }
 }

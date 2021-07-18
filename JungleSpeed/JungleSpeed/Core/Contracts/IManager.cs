@@ -8,6 +8,8 @@ namespace JungleSpeed.Core
         void InitialisePlayers(int playerCount);
         void DrawField();
         void InitialiseCards();
+        void ShuffleCards();
+        void DealCards();
     }
 
 }
