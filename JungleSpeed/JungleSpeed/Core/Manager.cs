@@ -66,23 +66,26 @@ namespace JungleSpeed.Core
 			}
 		}
 
-		public void InitialisePlayers(int playerCount)
-		{
-			players = new List<Player>(playerCount);
+        public void InitialisePlayers(int playerCount)
+        {
+            int firstRow = playerCount / 2 + playerCount % 2;
+            int secondRow = playerCount / 2;
 
-			int firstRow = playerCount / 2 + playerCount % 2;
-			int secondRow = playerCount / 2;
+            int posWidth = fieldWidth / 2 - firstRow;
+            int firstRowY = 3;
+            int secondRowY = fieldHeight - 3;
 
-			int posWidth = fieldWidth / 2 - firstRow;
-			int firstRowY = 3;
-			int secondRowY = fieldHeight - 3;
+            int cardsPerPlayer = cards.Count / playerCount;
+            int cardsLeft = cards.Count % playerCount;
+            int cardCounter = 0;
 
-			for (int i = 0; i < firstRow; i++)
-				players.Add(new Player(renderer, new Position(posWidth + i * 2, firstRowY), -1), 1,  cards.ToList().GetRange(1, 20));
+            for (int i = 0; i < firstRow; i++)
+                players.Add(new Player(renderer, new Position(posWidth + i * 2, firstRowY), -1, cards.ToList().GetRange(i * cardsPerPlayer, cardsPerPlayer)));
 
+            for (int i = 0; i < secondRow; i++)
+                players.Add(new Player(renderer, new Position(posWidth + i * 2, secondRowY), 1, cards.ToList().GetRange(i * cardsPerPlayer, cardsPerPlayer)));
 
-			for (int i = 0; i < secondRow; i++)
-				players.Add(new Player(renderer, new Position(posWidth + i * 2, secondRowY), 1, cards.ToList().GetRange(1, 20)));
+			totem.AddToStake(cards.ToList().GetRange(cardsPerPlayer * playerCount, cardsLeft));
 		}
 		public void DrawField()
 		{
@@ -92,17 +95,5 @@ namespace JungleSpeed.Core
 			}
 			totem.Draw();
 		}
-
-        public void DealCards()
-        {
-			int cardsPerPlayer = cards.Count / players.Count;
-            for (int i = 0; i < cards.Count; i++)
-            {
-                for (int j = 0; j < players.Count; j++)
-                {
-					players[j] = new Player(renderer, )
-                }
-            }
-        }
     }
 }

@@ -11,6 +11,7 @@ namespace JungleSpeed.Models
         private string skin;
         private int height;
         private int width;
+        private Stack<Card> stake;
         public Totem(IRenderer renderer, Position pos)
             : base(renderer, pos)
         {
@@ -28,7 +29,15 @@ namespace JungleSpeed.Models
                 }
             }
             skin = sb.ToString();
+            stake = new Stack<Card>();
 
+        }
+        public void AddToStake(IEnumerable<Card> newStake)
+        {
+            foreach (var card in newStake)
+            {
+                stake.Push(card);
+            }
         }
         public override void Draw()
         {

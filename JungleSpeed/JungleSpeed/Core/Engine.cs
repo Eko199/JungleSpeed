@@ -9,7 +9,7 @@ namespace JungleSpeed.Core
     class Engine : IEngine
     {
         private IManager manager;
-        private int playerCount = 5;
+        private int playerCount = 6;
         public Engine()
         {
             
@@ -21,7 +21,7 @@ namespace JungleSpeed.Core
             manager = new Manager(new ConsoleRenderer());
             manager.InitialiseCards();
             manager.ShuffleCards();
-            manager.InitialisePlayers(playerCount);   
+            manager.InitialisePlayers(playerCount);
                 
         }
     }
